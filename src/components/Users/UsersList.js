@@ -1,11 +1,11 @@
-import classes from './UserList.module.css'
+import classes from './UsersList.module.css'
 import Card from '../UI/Card'
-const UserList = props => {
+const UsersList = props => {
     return (
         <Card className={classes.users}>
             <ul>
                 {props.users.map((user) => {
-                    <li>
+                    return <li key={user.id}>
                         {user.name} ({user.age} year old)
                     </li>
                 })}
@@ -14,4 +14,4 @@ const UserList = props => {
     )
 }
 
-export default UserList
+export default UsersList
